@@ -1,6 +1,23 @@
-p {
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-  }
+p,
+a {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.form_blockquote {
+  color: #083;
+}
+
+.form_table {
+  color: purple;
+}
+
+.form_heading {
+  color: red;
+}
+
+.heading1 {
+  color: #eeee02;
+}

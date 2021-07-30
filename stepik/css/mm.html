@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head> 
+    <title> Example. </title>
+    <link rel="stylesheet" href="/css/xd.css">
+</head>
+<body>
+  <div class="promo-bar">
+    <p class="promo-cta-button">1.Бомба бомбу бомбит бомбежками</p>
+    -эта строчка не подчеркнута т.к. не отслеживается путь который задан в css.
+    " .promo-bar > .promo-item > .promo-cta-button"
+    <p>2.Бомба бомбу бомбит бомбежками</p>
+    <div class="promo-item">
+      <p class="promo-cta-button">3.Бомба бомбу бомбит бомбежками</p>
+      -эта строчка подчеркнута
+      <p>4.Бомба бомбу бомбит бомбежками</p>
+      <div class="promo-cta-button">
+        <p>5.Бомба бомбу бомбит бомбежками</p>
+        -эта строчка подчеркнута
+        <p>6.Бомба бомбу бомбит бомбежками</p>
+        -эта строчка подчеркнута
+      </div>
+    </div>
+  </div>
+</body>
