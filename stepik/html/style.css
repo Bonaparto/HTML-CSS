@@ -1,23 +1,56 @@
-p,
-a {
-  position: relative;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
+h1, h2 {
+  font-family: sans-serif;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
 
-.form_blockquote {
-  color: #083;
+body {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FF851B;
 }
 
-.form_table {
-  color: purple;
+p {
+  font-size: 20px;
+  font-family: serif;
 }
 
-.form_heading {
-  color: red;
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  width: 90%;
+  border-collapse: collapse;
 }
 
-.heading1 {
-  color: #eeee02;
+th, td {
+  padding: 5px;
+  border: 3px solid #bbb;
+}
+
+td {
+  text-align: center;
+}
+
+thead > tr {
+  background-color: #04AA6D;
+}
+
+tbody > tr:nth-child(odd) {background-color: #f2f2f2;}
+
+figcaption {
+  font-style: italic;
+  text-align: right;
+  margin-left: 1.5em;
+}
+
+img {
+  float: right;
+}
+
+ol {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
