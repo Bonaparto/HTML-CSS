@@ -15,21 +15,55 @@ body {
     background-color: #007765;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px 0px; 
+    padding: 27px 0px; 
     text-align: right;
 }
 
-.text {
-    font-size: 1.5em;
-    font-family: sans-serif;
-    text-align: right;
-    color: white;
-    padding-right: 75px;
+.textcommon {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
     font-weight: 500;
+}
+
+.text {
+    font-size: 24px;
+    text-align: right;
+    padding-right: 75px;
+    color: white;
 }
 
 .img {
     position: absolute;
-    left: 75px;
+    left: 65px;
     top: 20px;
+    height: 45px;
+}
+
+.background {
+    background: url('images/pafosbackground.png');
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0px;
+}
+
+.text1 {
+    text-align: center;
+    font-size: 72px;
+    color: white;
+}
+
+.problemblock {
+    background-color: #EEEEEE;
+    text-align: left;
+    font-size: 32px;
+    padding: 40px 30px;
+}
+
+.p1 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #007765;
+    font-weight: 600;
+    font-size: 64px;
 }
