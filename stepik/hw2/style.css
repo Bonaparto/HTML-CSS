@@ -132,13 +132,13 @@ figcaption + figcaption {
 }
 
 .end {
-    background-color: #333333;
-    padding: 100px 350px;
+  background-color: #333333;
+  padding: 100px 350px;
 }
 
 .text2 {
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
 }
