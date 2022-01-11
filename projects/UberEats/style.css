@@ -1,19 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.grid__body {
-    display: grid;
-    grid-template: repeat(3, auto) / repeat(3, auto);
-    padding: 30px;
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 400;
 }
 
-.grid__item {
-    margin: 20px;
-    border: 5px solid gray;
-    text-align: center;
-    padding: 30px;
+.wrapper-outer {
+  margin: 5vw 0;
 }
+
+.wrapper-inner {
+  max-width: 90vw;
+  min-width: 960px;
+  margin: 0 5vw;
+}
+
+.header {
+  padding-bottom: 3vw;
+  -webkit-box-shadow: 0 12px 8px -8px rgba(38, 38, 38, 0.16);
+          box-shadow: 0 12px 8px -8px rgba(38, 38, 38, 0.16);
+}
+
+.header .wrapper-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.login-and-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.login-and-icon > svg {
+  margin-left: 3vw;
+  margin-right: 1vw;
+}
+
+.login {
+  font-size: 1.1vw;
+  font-weight: 500;
+  padding: 0.5vw 1vw;
+  border: 1px solid #E0E0E0;
+}
+
+.search input {
+  font-size: 1.3vw;
+  width: 90vw;
+  color: #626262;
+  border: none;
+  padding-bottom: 0.5vw;
+}
+
+.search input:focus {
+  outline-width: 0;
+}
+
+.search .wrapper-inner {
+  border-bottom: 2px solid #757575;
+  opacity: 0.5;
+}
+
+.section-list img {
+  width: 28vw;
+}
+
+.section-list h1 {
+  font-weight: 400;
+  font-size: 2vw;
+  margin-bottom: 2vw;
+}
+
+.section-list .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+  -ms-grid-columns: (1fr)[3];
+      grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+  grid-gap: 2vw;
+}
+
+.section-list span {
+  display: block;
+  margin: 1vw 0;
+}
+
+.restaurant-name, .time {
+  font-size: 1.1vw;
+  font-weight: 500;
+  color: #1D1D1D;
+}
+
+.cuisins-list {
+  font-size: 1vw;
+  color: #626262;
+}
+
+.time {
+  font-size: 0.9vw;
+}
+
+.footer {
+  margin: 0;
+  padding: 5vw 0;
+  background-color: #262626;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+// === NULLIFYING STYLES ===
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+// === / NULLIFYING STYLES ===
+
+// === Mixin ===
+
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+// === / Mixin ===
+
+body {
+    @include roboto;
+    font-size: 400;
+}
+
+.wrapper-outer {
+    margin: 5vw 0;
+}
+
+.wrapper-inner {
+    max-width: 90vw;
+    min-width: 960px;
+    margin: 0 5vw;
+}
+
+// === HEADER ===
+
+.header {
+    & .wrapper-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    padding-bottom: 3vw;
+    box-shadow: 0 12px 8px -8px rgba(38, 38, 38, 0.16);
+}
+
+.login-and-icon {
+    display: flex;
+    
+    & > svg {
+        margin-left: 3vw;
+        margin-right: 1vw;
+    }
+}
+
+.login {
+    font-size: 1.1vw;
+    font-weight: 500;
+    padding: 0.5vw 1vw;
+    border: 1px solid #E0E0E0;
+}
+// === / HEADER ===
+
+// === SEARCH ===
+.search {
+    & input {
+        font-size: 1.3vw;
+        width: 90vw;
+        color: #626262;
+        border: none;
+        padding-bottom: 0.5vw;
+    }
+    & input:focus {
+        outline-width: 0;
+    }
+    & .wrapper-inner {
+        border-bottom: 2px solid #757575;
+        opacity: 0.5;
+    }
+}
+// === / SEARCH ===
+
+// === LIST ===
+.section-list {
+    & img {
+        width: 28vw;
+    }
+    & h1 {
+        font-weight: 400;
+        font-size: 2vw;
+        margin-bottom: 2vw;
+    }
+    & .list {
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr); 
+        grid-gap: 2vw;
+    }
+    & span {
+        display: block;
+        margin: 1vw 0;
+    }
+}
+
+.restaurant-name, .time {
+    font-size: 1.1vw;
+    font-weight: 500;
+    color: #1D1D1D;
+}
+.cuisins-list {
+    font-size: 1vw;
+    color: #626262;
+}
+.time {
+    font-size: 0.9vw;
+}
+// === / LIST ===
+
+// === FOOTER ===
+.footer {
+    margin: 0;
+    padding: 5vw 0;
+    background-color: #262626;
+}
+// === / FOOTER ===
