@@ -1,19 +1,5 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box; 
+.block {
+  font-size: 14px;
+  line-height: 1.5;
 }
-
-.grid__body {
-    display: grid;
-    grid-template: repeat(3, auto) / repeat(3, auto);
-    padding: 30px;
-}
-
-.grid__item {
-    margin: 20px;
-    border: 5px solid gray;
-    text-align: center;
-    padding: 30px;
-}
+/*# sourceMappingURL=style.css.map */
