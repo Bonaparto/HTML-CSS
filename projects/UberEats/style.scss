@@ -60,6 +60,7 @@ body {
     padding: 0.5vw 1vw;
     border: 1px solid #E0E0E0;
 }
+
 // === / HEADER ===
 
 // === SEARCH ===
@@ -120,6 +121,93 @@ body {
 .footer {
     margin: 0;
     padding: 5vw 0;
+    color: #FFFFFF;
     background-color: #262626;
+    & ul {
+        list-style: none;
+    }
+
+    & li {
+        margin-top: 2vw;
+    }
 }
+
+.footer-info {
+    font-size: 1vw;
+    margin: 5vw 0;
+    padding: 3vw 0;
+    & > * {
+        display: inline-block;
+        margin-right: 15vw;
+    }   
+    border-top: 2px solid #3B3B3B;
+    border-bottom: 2px solid #3B3B3B;
+}
+
+.footer__list1 {
+    & > * {
+        margin-top: 2vw;
+    }
+    
+    & .social {
+        margin-top: 1vw;
+    }
+    
+    & .social > * {
+        margin-right: 1vw;
+    }
+
+    & .social > *:hover {
+        filter: invert(46%) sepia(9%) saturate(14%) hue-rotate(54deg) brightness(98%) contrast(94%);
+    }
+    
+    & .hashtag {
+        font-size: 1.5vw;
+    }
+    
+    & .lattice { 
+        color: #49A144;
+    }
+    
+    & .language__name {
+        display: flex;
+        align-items: center;
+        & > * {
+            margin: 1vw;
+        }
+        & > svg + span {
+            margin-right: 10vw; 
+        }
+        background-color: #3B3B3B;
+        margin-top: 0;
+        margin-bottom: 3vw;
+        transition: background-color ease 0.5s;
+    }
+
+    & .language__name:hover {
+        background-color: #757575;
+    }
+}
+
+.downloads {
+    text-align: center;
+    & > a > img {
+        margin: 0 5vw;
+        width: 10vw;
+    }
+    padding-bottom: 5vw;
+    border-bottom: 2px solid #3B3B3B;
+    & > *:hover {
+        cursor: pointer;
+    }
+}
+
+.terms {
+    font-size: 1.2vw;
+    margin-top: 5vw;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
 // === / FOOTER ===
