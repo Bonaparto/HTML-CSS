@@ -5,6 +5,7 @@
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -18,8 +19,14 @@ body {
 
 .wrapper-inner {
   max-width: 90vw;
-  min-width: 960px;
   margin: 0 5vw;
+}
+
+@media screen and (max-width: 760px) {
+  .wrapper-inner {
+    max-width: 99vw;
+    margin: 0 0.5vw;
+  }
 }
 
 .header {
@@ -37,22 +44,59 @@ body {
           justify-content: space-between;
 }
 
-.header .login-and-icon {
+.header img {
+  width: 16vw;
+  height: 2vw;
+}
+
+@media screen and (max-width: 760px) {
+  .header img {
+    width: 32vw;
+    height: 4vw;
+  }
+}
+
+.login-and-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header .login-and-icon > svg {
+.login-and-icon > * {
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.login-and-icon > img {
+  width: 1.8vw;
+  height: 2.1vw;
   margin-left: 3vw;
   margin-right: 1vw;
 }
 
-.header .login {
+@media screen and (max-width: 760px) {
+  .login-and-icon > img {
+    width: 3.6vw;
+    height: 4.2vw;
+  }
+}
+
+.login {
   font-size: 1.1vw;
   font-weight: 500;
   padding: 0.5vw 1vw;
   border: 1px solid #E0E0E0;
+}
+
+.login:hover {
+  background-color: #d8d8d8;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+  .login {
+    font-size: 2.2vw;
+  }
 }
 
 .search input {
@@ -72,17 +116,23 @@ body {
   opacity: 0.5;
 }
 
-.section-list img {
+@media screen and (max-width: 760px) {
+  .search input {
+    font-size: 2.6vw;
+  }
+}
+
+.section-restaurants img {
   width: 28vw;
 }
 
-.section-list h1 {
+.section-restaurants h1 {
   font-weight: 400;
   font-size: 2vw;
   margin-bottom: 2vw;
 }
 
-.section-list .list {
+.section-restaurants .list {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[3];
@@ -91,24 +141,56 @@ body {
   grid-gap: 2vw;
 }
 
-.section-list span {
+.section-restaurants span {
   display: block;
   margin: 1vw 0;
 }
 
-.section-list .restaurant-name, .section-list .time {
+@media screen and (max-width: 760px) {
+  .section-restaurants .list {
+    -ms-grid-rows: (1fr)[2];
+    -ms-grid-columns: (1fr)[2];
+        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  }
+  .section-restaurants img {
+    width: 48.5vw;
+  }
+  .section-restaurants h1 {
+    font-size: 4vw;
+  }
+}
+
+.restaurant-name, .time {
   font-size: 1.1vw;
   font-weight: 500;
   color: #1D1D1D;
 }
 
-.section-list .cuisins-list {
+@media screen and (max-width: 760px) {
+  .restaurant-name, .time {
+    font-size: 2.2vw;
+  }
+}
+
+.cuisins-list {
   font-size: 1vw;
   color: #626262;
 }
 
-.section-list .time {
+@media screen and (max-width: 760px) {
+  .cuisins-list {
+    font-size: 2vw;
+  }
+}
+
+.time {
   font-size: 0.9vw;
+}
+
+@media screen and (max-width: 760px) {
+  .time {
+    font-size: 1.8vw;
+  }
 }
 
 .footer {
@@ -126,7 +208,19 @@ body {
   margin-top: 2vw;
 }
 
-.footer .footer-info {
+.footer img {
+  width: 20vw;
+  height: 2.5vw;
+}
+
+@media screen and (max-width: 760px) {
+  .footer img {
+    width: 30vw;
+    height: 3.75vw;
+  }
+}
+
+.footer-info {
   font-size: 1vw;
   margin: 5vw 0;
   padding: 3vw 0;
@@ -134,37 +228,102 @@ body {
   border-bottom: 2px solid #3B3B3B;
 }
 
-.footer .footer-info > * {
+.footer-info > * {
   display: inline-block;
   margin-right: 15vw;
 }
 
-.footer .footer-info .footer__list1 > * {
+@media screen and (max-width: 760px) {
+  .footer-info {
+    font-size: 2vw;
+  }
+  .footer-info > * {
+    margin-right: 7.5vw;
+  }
+  .footer-info img {
+    width: 40vw;
+    height: 5vw;
+  }
+}
+
+.footer__list1 > * {
   margin-top: 2vw;
 }
 
-.footer .footer-info .footer__list1 .social {
+.footer__list1 .social {
   margin-top: 1vw;
 }
 
-.footer .footer-info .footer__list1 .social > * {
+.footer__list1 .social img {
+  width: 1.7vw;
+  height: 1.7vw;
+}
+
+.footer__list1 .social > * {
   margin-right: 1vw;
 }
 
-.footer .footer-info .footer__list1 .social > *:hover {
+.footer__list1 .social > *:hover {
+  -webkit-filter: invert(46%) sepia(9%) saturate(14%) hue-rotate(54deg) brightness(98%) contrast(94%);
+          filter: invert(46%) sepia(9%) saturate(14%) hue-rotate(54deg) brightness(98%) contrast(94%);
+  cursor: pointer;
+}
+
+.footer__list1 .hashtag {
+  font-size: 1.5vw;
+}
+
+.footer__list1 .lattice {
+  color: #49A144;
+}
+
+.footer__list1 .language__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid #3B3B3B;
+  border-bottom: 2px solid #3B3B3B;
+  background-color: #3B3B3B;
+  margin-top: 0;
+  margin-bottom: 3vw;
+  -webkit-transition: background-color ease 0.5s;
+  transition: background-color ease 0.5s;
+}
+
+.footer__list1 .language__name > * {
+  display: inline-block;
+  margin-right: 15vw;
+}
+
+.footer__list1 .language__name .footer__list1 > * {
+  margin-top: 2vw;
+}
+
+.footer__list1 .language__name .footer__list1 .social {
+  margin-top: 1vw;
+}
+
+.footer__list1 .language__name .footer__list1 .social > * {
+  margin-right: 1vw;
+}
+
+.footer__list1 .language__name .footer__list1 .social > *:hover {
   -webkit-filter: invert(46%) sepia(9%) saturate(14%) hue-rotate(54deg) brightness(98%) contrast(94%);
           filter: invert(46%) sepia(9%) saturate(14%) hue-rotate(54deg) brightness(98%) contrast(94%);
 }
 
-.footer .footer-info .footer__list1 .hashtag {
+.footer__list1 .language__name .footer__list1 .hashtag {
   font-size: 1.5vw;
 }
 
-.footer .footer-info .footer__list1 .lattice {
+.footer__list1 .language__name .footer__list1 .lattice {
   color: #49A144;
 }
 
-.footer .footer-info .footer__list1 .language__name {
+.footer__list1 .language__name .footer__list1 .language__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,35 +337,76 @@ body {
   transition: background-color ease 0.5s;
 }
 
-.footer .footer-info .footer__list1 .language__name > * {
+.footer__list1 .language__name .footer__list1 .language__name > * {
   margin: 1vw;
 }
 
-.footer .footer-info .footer__list1 .language__name > svg + span {
+.footer__list1 .language__name .footer__list1 .language__name > svg + span {
   margin-right: 10vw;
 }
 
-.footer .footer-info .footer__list1 .language__name:hover {
+.footer__list1 .language__name .footer__list1 .language__name:hover {
   background-color: #757575;
 }
 
-.footer .downloads {
-  color: #262626;
+.footer__list1 .language__name > img + span {
+  margin-right: 10vw;
+}
+
+.footer__list1 .language__name img {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+@media screen and (max-width: 760px) {
+  .footer__list1 .language__name img {
+    width: 3vw;
+    height: 3vw;
+  }
+  .footer__list1 .language__name > span + img {
+    width: 2.2vw;
+    height: 2vw;
+  }
+}
+
+.footer__list1 .language__name:hover {
+  background-color: #757575;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+  .footer__list1 .hashtag {
+    font-size: 3vw;
+  }
+  .footer__list1 .social img {
+    width: 3.4vw;
+    height: 3.4vw;
+  }
+}
+
+.downloads {
   text-align: center;
   padding-bottom: 5vw;
   border-bottom: 2px solid #3B3B3B;
 }
 
-.footer .downloads > a > img {
-  margin: 0 5vw;
+.downloads img {
   width: 10vw;
+  margin: 0 5vw;
 }
 
-.footer .downloads > *:hover {
+.downloads > *:hover {
   cursor: pointer;
 }
 
-.footer .terms {
+@media screen and (max-width: 760px) {
+  .downloads img {
+    width: 20vw;
+    margin: 0 2.5vw;
+  }
+}
+
+.terms {
   font-size: 1.2vw;
   margin-top: 5vw;
   margin-bottom: 0;
@@ -216,5 +416,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 760px) {
+  .terms {
+    font-size: 1.8vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
