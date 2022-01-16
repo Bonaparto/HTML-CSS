@@ -10,7 +10,10 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 400;
+}
+
+* {
+  font-weight: 400;
 }
 
 .wrapper-outer {
@@ -45,14 +48,21 @@ body {
 }
 
 .header img {
-  width: 16vw;
-  height: 2vw;
+  width: 20vw;
+  height: 3vw;
 }
 
 @media screen and (max-width: 760px) {
   .header img {
-    width: 32vw;
-    height: 4vw;
+    width: 30vw;
+    height: 6vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header img {
+    width: 60vw;
+    height: 16vw;
   }
 }
 
@@ -60,6 +70,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .login-and-icon > * {
@@ -68,6 +81,7 @@ body {
 }
 
 .login-and-icon > img {
+  display: block;
   width: 1.8vw;
   height: 2.1vw;
   margin-left: 3vw;
@@ -76,8 +90,15 @@ body {
 
 @media screen and (max-width: 760px) {
   .login-and-icon > img {
-    width: 3.6vw;
-    height: 4.2vw;
+    display: block;
+    width: 3.4vw;
+    height: 3.8vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .login-and-icon > img {
+    display: none;
   }
 }
 
@@ -96,6 +117,13 @@ body {
 @media screen and (max-width: 760px) {
   .login {
     font-size: 2.2vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .login {
+    font-size: 5.5vw;
+    padding: 1.5vw 3vw;
   }
 }
 
@@ -122,12 +150,17 @@ body {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .search input {
+    font-size: 5.2vw;
+  }
+}
+
 .section-restaurants img {
   width: 28vw;
 }
 
 .section-restaurants h1 {
-  font-weight: 400;
   font-size: 2vw;
   margin-bottom: 2vw;
 }
@@ -135,28 +168,35 @@ body {
 .section-restaurants .list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[3];
-  -ms-grid-columns: (1fr)[3];
-      grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
   grid-gap: 2vw;
 }
 
-.section-restaurants span {
-  display: block;
+.section-restaurants h2, .section-restaurants h3, .section-restaurants h4 {
   margin: 1vw 0;
 }
 
 @media screen and (max-width: 760px) {
   .section-restaurants .list {
-    -ms-grid-rows: (1fr)[2];
-    -ms-grid-columns: (1fr)[2];
-        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
   .section-restaurants img {
-    width: 48.5vw;
+    width: 47.5vw;
   }
   .section-restaurants h1 {
     font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section-restaurants .list {
+    grid-template: repeat(1, 1fr)/repeat(1, 1fr);
+  }
+  .section-restaurants img {
+    width: 99vw;
+  }
+  .section-restaurants h1 {
+    font-size: 6vw;
   }
 }
 
@@ -172,6 +212,12 @@ body {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .restaurant-name, .time {
+    font-size: 5.5vw;
+  }
+}
+
 .cuisins-list {
   font-size: 1vw;
   color: #626262;
@@ -183,6 +229,12 @@ body {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .cuisins-list {
+    font-size: 5vw;
+  }
+}
+
 .time {
   font-size: 0.9vw;
 }
@@ -190,6 +242,12 @@ body {
 @media screen and (max-width: 760px) {
   .time {
     font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .time {
+    font-size: 4.5vw;
   }
 }
 
@@ -210,13 +268,23 @@ body {
 
 .footer img {
   width: 20vw;
-  height: 2.5vw;
+  height: 3vw;
 }
 
 @media screen and (max-width: 760px) {
   .footer img {
     width: 30vw;
-    height: 3.75vw;
+    height: 6vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer img {
+    width: 60vw;
+    height: 16vw;
+  }
+  .footer li {
+    margin-top: 5vw;
   }
 }
 
@@ -246,6 +314,20 @@ body {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .footer-info {
+    font-size: 6vw;
+  }
+  .footer-info > * {
+    display: block;
+    margin-top: 6vw;
+  }
+  .footer-info img {
+    width: 50vw;
+    height: 6.25vw;
+  }
+}
+
 .footer__list1 > * {
   margin-top: 2vw;
 }
@@ -265,7 +347,7 @@ body {
 
 .footer__list1 .social > *:hover {
   -webkit-filter: invert(46%) sepia(9%) saturate(14%) hue-rotate(54deg) brightness(98%) contrast(94%);
-          filter: invert(46%) sepia(9%) saturate(14%) hue-rotate(54deg) brightness(98%) contrast(94%);
+  filter: invert(46%) sepia(9%) saturate(14%) hue-rotate(54deg) brightness(98%) contrast(94%);
   cursor: pointer;
 }
 
@@ -284,8 +366,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: 2px solid #3B3B3B;
-  border-bottom: 2px solid #3B3B3B;
   background-color: #3B3B3B;
   margin-top: 0;
   margin-bottom: 3vw;
@@ -294,59 +374,7 @@ body {
 }
 
 .footer__list1 .language__name > * {
-  display: inline-block;
-  margin-right: 15vw;
-}
-
-.footer__list1 .language__name .footer__list1 > * {
-  margin-top: 2vw;
-}
-
-.footer__list1 .language__name .footer__list1 .social {
-  margin-top: 1vw;
-}
-
-.footer__list1 .language__name .footer__list1 .social > * {
-  margin-right: 1vw;
-}
-
-.footer__list1 .language__name .footer__list1 .social > *:hover {
-  -webkit-filter: invert(46%) sepia(9%) saturate(14%) hue-rotate(54deg) brightness(98%) contrast(94%);
-          filter: invert(46%) sepia(9%) saturate(14%) hue-rotate(54deg) brightness(98%) contrast(94%);
-}
-
-.footer__list1 .language__name .footer__list1 .hashtag {
-  font-size: 1.5vw;
-}
-
-.footer__list1 .language__name .footer__list1 .lattice {
-  color: #49A144;
-}
-
-.footer__list1 .language__name .footer__list1 .language__name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #3B3B3B;
-  margin-top: 0;
-  margin-bottom: 3vw;
-  -webkit-transition: background-color ease 0.5s;
-  transition: background-color ease 0.5s;
-}
-
-.footer__list1 .language__name .footer__list1 .language__name > * {
   margin: 1vw;
-}
-
-.footer__list1 .language__name .footer__list1 .language__name > svg + span {
-  margin-right: 10vw;
-}
-
-.footer__list1 .language__name .footer__list1 .language__name:hover {
-  background-color: #757575;
 }
 
 .footer__list1 .language__name > img + span {
@@ -369,6 +397,24 @@ body {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .footer__list1 .language__name {
+    width: 70vw;
+    height: 12vw;
+  }
+  .footer__list1 .language__name img {
+    width: 6vw;
+    height: 6vw;
+  }
+  .footer__list1 .language__name > span + img {
+    width: 4.4vw;
+    height: 4vw;
+  }
+  .footer__list1 .language__name > img + span {
+    margin-right: 30vw;
+  }
+}
+
 .footer__list1 .language__name:hover {
   background-color: #757575;
   cursor: pointer;
@@ -381,6 +427,19 @@ body {
   .footer__list1 .social img {
     width: 3.4vw;
     height: 3.4vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer__list1 > * {
+    margin-top: 7.5vw;
+  }
+  .footer__list1 .hashtag {
+    font-size: 7.5vw;
+  }
+  .footer__list1 .social img {
+    width: 8.5vw;
+    height: 8.5vw;
   }
 }
 
@@ -406,6 +465,13 @@ body {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .downloads img {
+    width: 30vw;
+    margin: 0 5vw;
+  }
+}
+
 .terms {
   font-size: 1.2vw;
   margin-top: 5vw;
@@ -421,6 +487,20 @@ body {
 @media screen and (max-width: 760px) {
   .terms {
     font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .terms {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 4.5vw;
+    margin-top: 0;
+  }
+  .terms > * {
+    margin-top: 5vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
